@@ -32,5 +32,14 @@ We can now proceed to create a very basic slurm script for our intended analysis
 
 Let us create a script called `01slurmJob.sh`
 
+```{bash}
+#!/bin/bash
+
+#SBATCH --job-name=FastQC
+#SBATCH --nodes=1
+
+fastqc sample.fastq.gz
+
+```
 
 
