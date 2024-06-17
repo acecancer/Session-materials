@@ -41,12 +41,12 @@ Let us create a script called `01slurmJob.sh`
 fastqc sample.fastq.gz
 ```
 
-Let us go over what we have in the above script:
-- 
+<u> Let us go over what we have in the above script:</u>
+-  `#!/bin/bash`: This line specifies which shell interpreter we are to use for our script, in this case bash.
+-  
 
 ### Why use SLURM?
-
-Efficiently manages computational resources.
+- Efficiently manages computational resources.
 - Supports a wide range of job types (batch, interactive, parallel).
 - Provides tools for job monitoring and management.
 - Ensures fair sharing of resources among users.
