@@ -94,7 +94,9 @@ Output of the squeue command is a list of all currently running jobs on the HPC.
 4. `ST`: This shows the STATUS of the submitted job. `R` in this case means our job is Running.
 5. `TIME`: This is the time our job has so far spent while running. It is in the format `Days-Hours:Minutes:Seconds`. Our job has so far been running for 04 seconds.
 6. `NODES`: The number of nodes requested for that particular analysis job. This is specified with `#SBATCH --nodes=1`, which requests for one node as we did, in our slurm script.
-7. `NODELIST`: Specifies the exact node, your analysis is running on, node2 for our submitted job. The node your analysis is to run is automatically assigned by slurm basing on which nodes are available at the moment to take on jobs.
+7. `NODELIST`: Specifies the exact compute node (c-node), your analysis is running on, c-node2 for our submitted job. The node your analysis is to run is automatically assigned by slurm basing on which nodes are available at the moment to take on jobs.
+
+
 
 
 ### Why use SLURM?
