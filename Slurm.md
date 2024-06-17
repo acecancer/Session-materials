@@ -72,6 +72,21 @@ At the same time slurm will create a new file in our working directory named as 
 01slurmJob.sh  sample.fastq.gz  slurm-6000.out
 ```
 
+To check the current status of our submitted job, we use the **squeue** command to see whether the 
+
+```bash
+(base) [fkakembo@kla-ac-hpc-01 slurm_tutorial]$ squeue 
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+              5980    normal bsqr_var pkakande  R   17:30:41      1 c-node3
+              5976    normal mutect2_ pkakande  R   18:57:41      1 c-node4
+              **6000    normal   FastQC fkakembo  R       0:04      1 c-node2**
+              5999    normal  mutect2 fkakembo  R    2:03:37      1 c-node1
+              5982    normal mutect2_ pkakande  R   16:04:46      1 c-node7
+              5927    normal Assemble fkakembo  R 1-09:44:53      1 c-node9
+              5926    normal    deMUX fkakembo  R 1-09:45:16      1 c-node8
+              5925    normal  samples gnakabir  R 1-09:48:56      1 c-node6
+              5924    normal  re-Dev2 fkakembo  R 1-09:53:14      1 c-node5
+```
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
