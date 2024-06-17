@@ -13,8 +13,8 @@ SLURM (Simple Linux Utility for Resource Management) is a powerful and flexible 
 
 ### Basic SLURM Concepts
 Before we go any further, let us define some key terms that will be used for the rest of this guide tutorial. 
-- **Node**: A single computational unit, often equivalent to a single physical server in the cluster. Think of the HPC a cluster a collection of many different computers (nodes) stacked together, where each of these nodes are capable of performing a computational analysis. 
-For the case of the ACE, we have types of nodes that is the login node (master node) and the compute node. The login node is where everyone is placed when they log into the HPC and the compute nodes are where your analyses (jobs) will be executed when submitted.
+- **Node**: A single computational unit, often equivalent to a single physical server in the cluster. Think of the HPC a cluster a collection of many different computers (nodes) stacked together, where each of these nodes is capable of performing a computational analysis. 
+For the case of the ACE, we have types of nodes: the login node (master node) and the compute node. The login node is where everyone is placed when they log into the HPC and the compute nodes are where your analyses (jobs) will be executed when submitted.
 - **Job**: A unit of work submitted to SLURM, which can be a single task such as alignment or a complex workflow.
 - **Job Script (Slurm Script)**: A script file containing both the SLURM directives and commands to execute the job. It specifies the resources required and the commands to run.
 
@@ -43,7 +43,9 @@ fastqc sample.fastq.gz
 
 **Before we submit our script above, let us first go over what we have**
 -  `#!/bin/bash`: This line specifies which shell interpreter we are to use for our script, which, in this case, is bash.
--  `#SBATCH --job-name=FastQC`: This is our first slurm directive line (it starts with #SBATCH), and it defines the name of the job we are to run in this case **FastQC**, using the **--job-name** option. This name definition can be anything you choose to define your job, however shorter and precise names are preferred. 
+-  `#SBATCH --job-name=FastQC`: This is our first slurm directive line (it starts with #SBATCH), and it defines the name of the job we are to run in this case **FastQC**, using the **--job-name** option. This name definition can be anything you choose to define your job, however, shorter and more precise names are preferred.
+-  `#SBATCH --nodes=1`: This is the second slurm directive (also starts with #SBATCH), which specifies how many compute nodes we need to run our particular job, using the **--nodes** option. In this case, we request for only **1 node** which is sufficient for our task. Every ACE node has 32GB of RAM and 16 CPUs.
+-  `fastqc sample.fastq.gz`: This specifies the actual job we are to run. In this case, we are running a FastQC quality control check on our fastq file.
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
