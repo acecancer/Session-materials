@@ -49,7 +49,7 @@ fastqc sample.fastq.gz
 -  `#SBATCH --nodes=1`: This is the second slurm directive (also starts with #SBATCH), which specifies how many compute nodes we need to run our particular job, using the **--nodes** option. In this case, we request for only **1 node** which is sufficient for our task. Every ACE node has 32GB of RAM and 16 CPUs.
 -  `fastqc sample.fastq.gz`: This specifies the actual job we are to run. In this case, we are running a FastQC quality control check on our fastq file.
 
-At this moment, we should see these two files in our working directory when we list its contents
+At this moment, we should see these two files in our working directory when we list its contents.
 
 ```
 (base) [fkakembo@kla-ac-hpc-01 slurm_tutorial]$ ls 
@@ -57,7 +57,21 @@ At this moment, we should see these two files in our working directory when we l
 ```
 
 ### Submitting a SLURM Job
-To run a job on the ACE HPC system using SLURM, you need to create a slurm script first and submit it using the sbatch command. To better demonstrate this, we shall create a script that performs quality check on the fastq sample with the fastqc program. 
+To submit our analysis job using slurm, we use the **`sbatch`** command followed by our script name. 
+
+```bash
+(base) [fkakembo@kla-ac-hpc-01 slurm_tutorial]$ sbatch 01slurmJob.sh
+Submitted batch job 6000
+```
+When a job is submitted successfully, it is assigned an analysis job identifier (JOBID) number. In our case, our JOBID is `6000`. Please note that this will be different for every job submitted, therefore you will have a different JOBID when you submit your job. 
+
+At the same time slurm will create a new file in our working directory named as `slurm-<JOBID>.out`, which is a slurm file to store the log outputs from your analysis. In our case this file will be `slurm-6000.out` since our JOBID was 6000. Again keep in mind that this will be different for you as well. 
+
+```bash
+(base) [fkakembo@kla-ac-hpc-01 slurm_tutorial]$ ls
+01slurmJob.sh  sample.fastq.gz  slurm-6000.out
+```
+
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
