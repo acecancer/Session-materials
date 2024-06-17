@@ -18,9 +18,8 @@ For the case of the ACE, we have types of nodes: the login node (master node) an
 - **Job**: A unit of work submitted to SLURM, which can be a single task such as alignment or a complex workflow.
 - **Job Script (Slurm Script)**: A script file containing both the SLURM directives and commands to execute the job. It specifies the resources required and the commands to run.
 
-### Submitting a SLURM Job
-
-To run a job on the ACE HPC system using SLURM, you need to create a slurm script first and submit it using the sbatch command. To better demonstrate this, we shall create a script that performs quality check on the fastq sample with the fastqc program. 
+### Creating our first a SLURM script
+We will create our first slurm script that performs a basic analysis, in this case, performs a quality check on the fastq sample using the fastqc program. 
 
 Let us start by downloading a test file to use, `sample.fastq.gz` which can be found [here](https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz).
 
@@ -46,6 +45,10 @@ fastqc sample.fastq.gz
 -  `#SBATCH --job-name=FastQC`: This is our first slurm directive line (it starts with #SBATCH), and it defines the name of the job we are to run in this case **FastQC**, using the **--job-name** option. This name definition can be anything you choose to define your job, however, shorter and more precise names are preferred.
 -  `#SBATCH --nodes=1`: This is the second slurm directive (also starts with #SBATCH), which specifies how many compute nodes we need to run our particular job, using the **--nodes** option. In this case, we request for only **1 node** which is sufficient for our task. Every ACE node has 32GB of RAM and 16 CPUs.
 -  `fastqc sample.fastq.gz`: This specifies the actual job we are to run. In this case, we are running a FastQC quality control check on our fastq file.
+
+
+### Submitting a SLURM Job
+To run a job on the ACE HPC system using SLURM, you need to create a slurm script first and submit it using the sbatch command. To better demonstrate this, we shall create a script that performs quality check on the fastq sample with the fastqc program. 
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
