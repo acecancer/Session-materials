@@ -24,7 +24,7 @@ To run a job on the ACE HPC system using SLURM, you need to create a slurm scrip
 
 Let us start by downloading a test file to use, `sample.fastq.gz` which can be found [here](https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz).
 
-```
+```bash
 wget https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz
 ```
 
