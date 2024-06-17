@@ -18,4 +18,13 @@ For the case of the ACE, we have types of nodes that is the login node (master n
 - **Job**: A unit of work submitted to SLURM, which can be a single task such as alignment or a complex workflow.
 - **Job Script (Slurm Script)**: A script file containing both the SLURM directives and commands to execute the job. It specifies the resources required and the commands to run.
 
+### Submitting a SLURM Job
+
+To run a job on the ACE HPC system using SLURM, you need to create a slurm script first and submit it using the sbatch command. To better demonstrate this, we shall create a script that performs quality check on the fastq sample with the fastqc program. 
+
+Let us start by downloading a test file to use, sample.fastq.gz which can be found [here](https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz).
+
+```
+wget https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz
+```
 
