@@ -41,9 +41,9 @@ Let us create a script called `01slurmJob.sh`
 fastqc sample.fastq.gz
 ```
 
-<u> Let us go over what we have in the above script:</u>
--  `#!/bin/bash`: This line specifies which shell interpreter we are to use for our script, in this case bash.
--  
+**Before we submit our script above, let us first go over what we have**
+-  `#!/bin/bash`: This line specifies which shell interpreter we are to use for our script, which, in this case, is bash.
+-  `#SBATCH --job-name=FastQC`: This is our first slurm directive line (it starts with #SBATCH), and it defines the name of the job we are to run in this case **FastQC**, using the **--job-name** option. This name definition can be anything you choose to define your job, however shorter and precise names are preferred. 
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
