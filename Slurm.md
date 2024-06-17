@@ -87,6 +87,15 @@ To check the current status of our submitted job, we use the **squeue** command 
               5925    normal  samples gnakabir  R 1-09:48:56      1 c-node6
               5924    normal  re-Dev2 fkakembo  R 1-09:53:14      1 c-node5
 ```
+Output of the squeue command is a list of all currently running jobs on the HPC. From the list, we can see our job (JOBID 6000) is among the currently running jobs. There are a couple of things we can note from the output:
+1. `JOBID`: The identifier assigned to every submitted job to the HPC, ours is 6000 in this case.
+2. `NAME`: This is the name we gave our job inside the slurm script with `#SBATCH --job-name=FastQC`, and that is why our job has the name FastQC from the list.
+3. `USER`: This is the name of the user who submitted that particular job to the HPC.
+4. `ST`: This shows the STATUS of the submitted job. `R` in this case means our job is Running.
+5. `TIME`: This is the time our job has so far spent while running. It is in the format `Days-Hours:Minutes:Seconds`. Our job has so far been running for 04 seconds.
+6. `NODES`: The number of nodes requested for that particular analysis job. This is specified with `#SBATCH --nodes=1`, which requests for one node as we did, in our slurm script.
+7. `NODELIST`: Specifies the exact node, your analysis is running on, node2 for our submitted job. The node your analysis is to run is automatically assigned by slurm basing on which nodes are available at the moment to take on jobs.
+
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
