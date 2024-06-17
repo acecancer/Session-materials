@@ -79,7 +79,7 @@ To check the current status of our submitted job, we use the **squeue** command 
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
               5980    normal bsqr_var pkakande  R   17:30:41      1 c-node3
               5976    normal mutect2_ pkakande  R   18:57:41      1 c-node4
-              6000    normal   FastQC fkakembo  R       0:04      1 c-node2**
+             *6000    normal   FastQC fkakembo  R       0:04      1 c-node2*
               5999    normal  mutect2 fkakembo  R    2:03:37      1 c-node1
               5982    normal mutect2_ pkakande  R   16:04:46      1 c-node7
               5927    normal Assemble fkakembo  R 1-09:44:53      1 c-node9
