@@ -22,9 +22,15 @@ For the case of the ACE, we have types of nodes that is the login node (master n
 
 To run a job on the ACE HPC system using SLURM, you need to create a slurm script first and submit it using the sbatch command. To better demonstrate this, we shall create a script that performs quality check on the fastq sample with the fastqc program. 
 
-Let us start by downloading a test file to use, sample.fastq.gz which can be found [here](https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz).
+Let us start by downloading a test file to use, `sample.fastq.gz` which can be found [here](https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz).
 
 ```
 wget https://github.com/acecancer/acecancer.github.io/raw/main/sample.fastq.gz
 ```
+
+We can now proceed to create a very basic slurm script for our intended analysis. As mentioned previously, this will contain a **SLURM directives** section which specifies the resources to use for the task and commands to run. Slurm directives start with **#SBATCH** which is how the system is able to distinguish them from your normal commands to perform a task. 
+
+Let us create a script called `01slurmJob.sh`
+
+
 
