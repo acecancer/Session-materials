@@ -103,7 +103,7 @@ Output of the squeue command is a list of all currently running jobs on the HPC.
     .
 
 
-_**====>  Documentation Still Under Active Development and Update <====**_
+_**======>  Documentation Still Under Active Development: Check Back for More Update <======**_
 
 ### Why use SLURM?
 - Efficiently manages computational resources.
