@@ -63,9 +63,10 @@ conda env create --name optitype  --file /etc/ace-data/CancerGenomicsWG/Tools/op
 conda activate optitype
 
 python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
-              -i SRR25434461_1.fastq  SRR25434461_2.fastq \
-              --dna -v -o ./Results/Optitype -c /etc/ace-data/home/gagaba/Project_analysis/Tools/OptiType/config.ini --prefix SRR25434461
-
-
-
+              -i sample_R1.fastq  sample_R2.fastq \
+              --dna -v -o ./Results/Optitype -c /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiType/config.ini --prefix sample
 ```
+
+A few things to note:
+- Make a copy of the `config.ini` file and include your own version the razers3 program installed in your space, that is `razers3=/path/to/razers3`
+- Modifify the input files and sample ids to match your sample assigned.
