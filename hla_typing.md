@@ -18,12 +18,14 @@ samtools sort -@ 12 Results/Alignment_hg19/sample.sam -o Results/Alignment_hg19/
 samtools index Results/Alignment_hg19/sample.bam
 ```
 
-### Step Create a Polysolver conda environment
+### Step 2: Create a Polysolver conda environment
 We will need to first create a conda environment for this. 
 
 ```bash
 conda env create --name polysolver  --file /etc/ace-data/CancerGenomicsWG/Tools/polysolver.yml --yes
 ```
+
+### Step 3: Run the Polysolver script
 
 When the environment is done being created, go ahead and activate it and run the polysolver hla typing script. 
 
@@ -45,3 +47,6 @@ HLA-A   hla_a_01_04n    hla_a_01_04n
 HLA-B   hla_b_07_03     hla_b_07_03
 HLA-C   hla_c_01_03     hla_c_01_03
 ```
+
+## Optitype
+Read more about optitype at their [Github repo](https://github.com/FRED-2/OptiType)
