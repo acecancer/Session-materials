@@ -69,4 +69,4 @@ python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
 
 A few things to note:
 - Make a copy of the `config.ini` file and include your own version the razers3 program installed in your space, that is `razers3=/path/to/razers3`
-- Modifify the input files and sample ids to match your sample assigned.
+- Modify the input files and sample ids to match your sample assigned.
