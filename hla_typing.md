@@ -50,3 +50,22 @@ HLA-C   hla_c_01_03     hla_c_01_03
 
 ## Optitype
 Read more about optitype at their [Github repo](https://github.com/FRED-2/OptiType)
+
+### Step 1: Creating an Optitype Conda environment
+
+```bash
+conda env create --name optitype  --file /etc/ace-data/CancerGenomicsWG/Tools/optitype.yml --yes
+```
+
+## Step 2: Running the Optitype tool
+
+```bash
+conda activate optitype
+
+python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
+              -i SRR25434461_1.fastq  SRR25434461_2.fastq \
+              --dna -v -o ./Results/Optitype -c /etc/ace-data/home/gagaba/Project_analysis/Tools/OptiType/config.ini --prefix SRR25434461
+
+
+
+```
