@@ -4,7 +4,7 @@ The samples can be found at `/etc/ace-data/CancerGenomicsWG/VariantCalling/sampl
 
 ## PolySolver
 
-### Steps 1: Alignment with BWA:
+#### Steps 1: Alignment with BWA:
 We first align our samples to the human reference genome, version 19 (hg19). A copy of this reference and its indices have been added to our shared folder under the location: `/etc/ace-data/CancerGenomicsWG/Tools/References`. However, feel free to use your own copy of the reference in case you have one.
 
 ```bash
@@ -18,14 +18,14 @@ samtools sort -@ 12 Results/Alignment_hg19/sample.sam -o Results/Alignment_hg19/
 samtools index Results/Alignment_hg19/sample.bam
 ```
 
-### Step 2: Create a Polysolver conda environment
+#### Step 2: Create a Polysolver conda environment
 We will need to first create a conda environment for this. 
 
 ```bash
 conda env create --name polysolver  --file /etc/ace-data/CancerGenomicsWG/Tools/polysolver.yml --yes
 ```
 
-### Step 3: Run the Polysolver script
+#### Step 3: Run the Polysolver script
 
 When the environment is done being created, go ahead and activate it and run the polysolver hla typing script. 
 
@@ -51,13 +51,13 @@ HLA-C   hla_c_01_03     hla_c_01_03
 ## Optitype
 Read more about optitype at their [Github repo](https://github.com/FRED-2/OptiType)
 
-### Step 1: Creating an Optitype Conda environment
+#### Step 1: Creating an Optitype Conda environment
 
 ```bash
 conda env create --name optitype  --file /etc/ace-data/CancerGenomicsWG/Tools/optitype.yml --yes
 ```
 
-## Step 2: Running the Optitype tool
+#### Step 2: Running the Optitype tool
 
 ```bash
 conda activate optitype
