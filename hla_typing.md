@@ -31,7 +31,8 @@ When the environment is done being created, go ahead and activate it and run the
 
 ```bash
 #Activate the environmnet
-conda activate polysolver
+#conda activate polysolver
+conda activate /etc/ace-data/CancerGenomicsWG/Tools/polysolver_env
 
 mkdir -p Results/polysolver
 
@@ -60,7 +61,8 @@ conda env create --name optitype  --file /etc/ace-data/CancerGenomicsWG/Tools/op
 #### Step 2: Running the Optitype tool
 
 ```bash
-conda activate optitype
+#conda activate optitype
+conda activate /etc/ace-data/CancerGenomicsWG/Tools/optitype_env
 
 python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
               -i sample_R1.fastq  sample_R2.fastq \
