@@ -64,7 +64,7 @@ conda activate optitype
 
 python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
               -i sample_R1.fastq  sample_R2.fastq \
-              --dna -v -o ./Results/Optitype -c /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiType/config.ini --prefix sample
+              --dna -v -o ./Results/Optitype -c /etc/ace-data/CancerGenomicsWG/Tools/OptiType/config.ini --prefix sample
 ```
 
 A few things to note:
