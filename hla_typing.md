@@ -78,7 +78,6 @@ A few things to note:
 4. CPLEX 12.5 or other Pyomo-supported ILP solver (GLPK, CBC, ...
    
 - Install all the Python modules after activating the conda environment
-- 
 1. `pip install numPy==1.9.3 `
 2. `pip install pyomo`
 3. `conda install pytables`
