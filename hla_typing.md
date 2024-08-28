@@ -70,7 +70,7 @@ python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
 ```
 
 A few things to note:
-- Clone the Github repository for optitype 'git clone https://github.com/FRED-2/OptiType.git'
+- Clone the Github repository for optitype `git clone https://github.com/FRED-2/OptiType.git`
 - Install all required software and libraries including Python 2.7 after activating the conda environment (Most of these softwares and libraries can be installed using conda)
 1. RazerS 3.4 
 2. SAMtools 1.2
