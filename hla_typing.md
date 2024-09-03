@@ -70,5 +70,24 @@ python /etc/ace-data/CancerGenomicsWG/Tools/OptiType/OptiTypePipeline.py \
 ```
 
 A few things to note:
+- Clone the Github repository for optitype `git clone https://github.com/FRED-2/OptiType.git`
+- Install all required software and libraries including Python 2.7 after activating the conda environment (Most of these softwares and libraries can be installed using conda)
+1. RazerS 3.4 
+2. SAMtools 1.2
+3. HDF5 1.8.15
+4. CPLEX 12.5 or other Pyomo-supported ILP solver (GLPK, CBC, ...
+   
+- Install all the Python modules after activating the conda environment
+1. `pip install numPy==1.9.3 `
+2. `pip install pyomo`
+3. `conda install pytables`
+4. `pip install pandas `
+5. `pip install pysam==0.8.3`
+6. `pip install matplotlib `
+7. `pip install future`
+   
+- Change the directory to that folder: ` cd Optitype `  inorder to be able to use the optitype script `OptiTypePipeline.py` or you can as wll use the full path to the optitype script
+  
 - Make a copy of the `config.ini` file and include your own version the razers3 program installed in your space, that is `razers3=/path/to/razers3`
+  
 - Modify the input files and sample ids to match your sample assigned.
